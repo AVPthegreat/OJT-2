@@ -1,0 +1,56 @@
+# Docker ignore file - excludes from build context
+
+# Git
+.git
+.gitignore
+
+# Documentation
+*.md
+!README.md
+docs/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+.DS_Store
+
+# Virtual environments
+.env
+.venv
+env/
+venv/
+
+# Test files
+tests/
+__tests__/
+*.test.py
+*.spec.js
+.pytest_cache/
+.coverage
+
+# Node (frontend specific)
+node_modules/
+.next/
+out/
+
+# Data (mounted as volumes)
+data/
+
+# Local configs
+*.local
+.env.local
+
+# Large ML models
+*.pt
+*.pth
+*.bin
+*.onnx
+
+# Docker files
+docker-compose*.yml
+Dockerfile*
+.docker/
+
+# Scripts
+scripts/

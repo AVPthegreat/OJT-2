@@ -1,0 +1,87 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual environments
+.env
+.venv
+env/
+venv/
+ENV/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+
+# Logs
+*.log
+logs/
+
+# Local development
+.env.local
+*.local
+
+# Data files (keep structure, ignore content)
+data/professor_audio/*.wav
+data/professor_audio/*.mp3
+data/chroma_db/
+*.sqlite3
+
+# ML Models (too large for git)
+ml/voice_clone/models/
+ml/scoring/models/
+*.pt
+*.pth
+*.bin
+*.onnx
+
+# Node modules (frontend)
+node_modules/
+.next/
+out/
+
+# Docker
+.docker/
+
+# Secrets
+*.pem
+*.key
+secrets/
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# Test coverage
+.coverage
+htmlcov/
+.pytest_cache/
+
+# Jupyter
+.ipynb_checkpoints/
