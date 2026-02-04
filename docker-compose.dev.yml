@@ -77,25 +77,26 @@ services:
     restart: unless-stopped
 
   # ===========================================
-  # Frontend (for future)
+  # Frontend with hot reload
   # ===========================================
-  # frontend:
-  #   build:
-  #     context: ./frontend
-  #     dockerfile: Dockerfile
-  #     target: development
-  #   container_name: viva-frontend-dev
-  #   ports:
-  #     - "3000:3000"
-  #   volumes:
-  #     - ./frontend:/app
-  #     - /app/node_modules
-  #   environment:
-  #     - NEXT_PUBLIC_API_URL=http://localhost:8000
-  #   networks:
-  #     - viva-network
-  #   depends_on:
-  #     - backend
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+      target: development
+    container_name: viva-frontend-dev
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+      - /app/.next
+    environment:
+      - NEXT_PUBLIC_API_URL=http://localhost:8000
+    networks:
+      - viva-network
+    depends_on:
+      - backend
 
 networks:
   viva-network:
